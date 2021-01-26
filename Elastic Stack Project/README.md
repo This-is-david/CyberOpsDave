@@ -24,3 +24,4 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
 ##### Azure images of Load Balancer
+[](Elastic%20Stack%20Project/Images/Azure%20Load%20Balancer.png)
