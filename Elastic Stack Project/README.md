@@ -25,5 +25,5 @@ Load balancing ensures that the application will be highly available, in additio
 
 ##### Azure images of Load Balancer
 
-[Azure Load Balancer.png](./Images/Azure%20Load%20Balancer.png)
+[Azure Load Balancer.png](https://github.com/This-is-david/CyberOpsDave/blob/main/Elastic%20Stack%20Project/Images/Azure%20Load%20Balancer.png)
 [Azure Load Balancer 2.png](
