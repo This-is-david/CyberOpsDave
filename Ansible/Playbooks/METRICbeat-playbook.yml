@@ -25,7 +25,7 @@
 
     # Use command module
   - name: setup metricbeat
-    command: metricbeat setup
+    command: metricbeat setup -e
 
     # Use command module
   - name: start metricbeat service
