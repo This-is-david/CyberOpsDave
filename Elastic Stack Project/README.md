@@ -7,6 +7,8 @@ The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
 [ELK-playbook.yml](https://github.com/This-is-david/CyberOpsDave/blob/main/Elastic%20Stack%20Project/Project%20Ansible%20Files/ELK-playbook.yml)
+[FILEbeat-playbook.yml](https://github.com/This-is-david/CyberOpsDave/blob/main/Elastic%20Stack%20Project/Project%20Ansible%20Files/FILEbeat-playbook.yml)
+[METRICbeat-playbook.yml](https://github.com/This-is-david/CyberOpsDave/blob/main/Elastic%20Stack%20Project/Project%20Ansible%20Files/METRICbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
