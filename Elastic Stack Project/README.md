@@ -104,11 +104,14 @@ SSH into the control node and follow the steps below:
       - Also create a backup copy directly to the JUMPBOXprovisioner VM because data should never only be stored on a container.
          - sudo docker cp goofy_buck:/etc/ansible/files ~/ansible-playbooks/
 - Update the 'hosts' file to include:
-     - webservers 
+     - webservers
+     
       `10.0.0.9 ansible_python_interpreter=/usr/bin/python3
       `10.0.0.10 ansible_python_interpreter=/usr/bin/python3
       `10.0.0.8 ansible_python_interpreter=/usr/bin/python3
+      
      - elkservers
+     
       `10.1.0.4 ansible_python_interpreter=/usr/bin/python3
     
     - Make sure that the 'hosts' file lives in /etc/ansible/hosts
@@ -151,8 +154,8 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 - Reload your Kibana webpage and enjoy all of your new data and metrics with the beautiful Kibana display! 
 
 Note-- Always Make Sure Your OS, apps, and packages are always running their latest configurations with the previously listed commands:
-    - do-release-upgrade -d
-    - sudo apt-get update
-    - sudo apt-get upgrade 
+      - do-release-upgrade -d
+      - sudo apt-get update
+      - sudo apt-get upgrade 
 
 Please Use Reference: Installation and Setup File    (Under Construction)
