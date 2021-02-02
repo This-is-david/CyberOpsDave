@@ -99,56 +99,63 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
+
 - Copy the ELK-playbook.yml file to Ansible Docker goofy_buck.
-  - Also create a backup copy directly to the JUMPBOXprovisioner VM because data should never only be stored on a container.
-   - sudo docker cp goofy_buck:/etc/ansible/files ~/ansible-playbooks/
+      - Also create a backup copy directly to the JUMPBOXprovisioner VM because data should never only be stored on a container.
+         - sudo docker cp goofy_buck:/etc/ansible/files ~/ansible-playbooks/
 - Update the 'hosts' file to include:
-  - webservers 
+     - webservers 
+    
     10.0.0.9 ansible_python_interpreter=/usr/bin/python3
     10.0.0.10 ansible_python_interpreter=/usr/bin/python3
     10.0.0.8 ansible_python_interpreter=/usr/bin/python3
-  - elkservers
+    
+     - elkservers
+    
     10.1.0.4 ansible_python_interpreter=/usr/bin/python3
- - Make sure that the 'hosts' file lives in /etc/ansible/hosts
+    
+      - Make sure that the 'hosts' file lives in /etc/ansible/hosts
+ 
 - Run the playbook, and navigate to http://20.57.177.110:5601/app/kibana to check that the installation worked as expected.
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 - Create the Azure Cloud Network needed using the Azure Portal.
- - Make sure Load Balancer Pools and Rules are specified.
- - Make sure Netwrok Security Group Rules are configured to open the required ports and allow access from the necessary IP addresses.
+    - Make sure Load Balancer Pools and Rules are specified.
+    - Make sure Netwrok Security Group Rules are configured to open the required ports and allow access from the necessary IP addresses.
 - Use SSH from the Jump Box VM to access all other VMs. 
- - ssh (username)@(Private IP of destination VM)
-   - Make sure that the OS of each VM is up to date. 
-    - do-release-upgrade -d
-   - Make sure that all installed software is up to date
-    - sudo apt-get update
-    - sudo apt-get upgrade
+    - ssh (username)@(Private IP of destination VM)
+      - Make sure that the OS of each VM is up to date. 
+        - do-release-upgrade -d
+      - Make sure that all installed software is up to date
+        - sudo apt-get update
+        - sudo apt-get upgrade
 - From the Jump Box VM create and run an Ansible Docker container.
- - sudo docker pull cyberxsecurity/ansible
- - sudo docker run -it -d cyberxsecurity/ansible
+    - sudo docker pull cyberxsecurity/ansible
+    - sudo docker run -it -d cyberxsecurity/ansible
 - Verify the creation of the newly created Ansible Docker container.
- - sudo docker ps -a
+    - sudo docker ps -a
 - For starting and connecting to the Ansible container 
- - sudo docker start (Container Name or Container ID)
- - sudo docker attach (Container Name or Container ID)
+    - sudo docker start (Container Name or Container ID)
+    - sudo docker attach (Container Name or Container ID)
 - From the Ansible container (of the Jump Box VM) make sure that the hosts and ansible.conf files are updated to reflect the correct opened ports and IP addresses using your editor of choice nano, vi, vim, etc. (Nano is always the best choice!) 
 - From the Ansible container run the PENtest-playbook in order to install the DVWA containers on the web server VMs.
- - ansible-playbook PENtest-playbook.yml
+    - ansible-playbook PENtest-playbook.yml
 - From the Ansible container run the ELK-playbook creating an ELK container on the ELK server VM to install and run the Elastic Stack software.
- - ansible-playbook ELK-playbook.yml
+    - ansible-playbook ELK-playbook.yml
 - From either the Jump Box VM or the Ansible container there within use SSH to connect to your VMs to confirm newly created containers.
- - sudo docker ps -a
+    - sudo docker ps -a
 - From ELK server VM, launch ELK container.
- -sudo docker start elk
+    -sudo docker start elk
 - From HOST (Home Network) machine navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana.
 - From the Ansible container (With Kibana running), add Filebeat and Metricbeat to your DVWA web server VMs to start logging data and metrics. 
- - ansible-playbook FILEbeat-playbook.yml
- - ansible-playbook METRICbeat-playbook.yml
+    - ansible-playbook FILEbeat-playbook.yml
+    - ansible-playbook METRICbeat-playbook.yml
 - Reload your Kibana webpage and enjoy all of your new data and metrics with the beautiful Kibana display! 
-Note Always Make Sure Your OS, apps, and packages are always running their latest configurations with the previously listed commands:
-- do-release-upgrade -d
-- sudo apt-get update
-- sudo apt-get upgrade 
+
+Note-- Always Make Sure Your OS, apps, and packages are always running their latest configurations with the previously listed commands:
+    - do-release-upgrade -d
+    - sudo apt-get update
+    - sudo apt-get upgrade 
 
 Please Use Reference: Installation and Setup File    (Under Construction)
