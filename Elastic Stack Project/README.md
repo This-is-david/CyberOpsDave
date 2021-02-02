@@ -121,7 +121,9 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to http://20.57.177.110:5601/app/kibana to check that the installation worked as expected.
 
 
+
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
 - Create the Azure Cloud Network needed using the Azure Portal.
     - Make sure Load Balancer Pools and Rules are specified.
     - Make sure Netwrok Security Group Rules are configured to open the required ports and allow access from the necessary IP addresses.
