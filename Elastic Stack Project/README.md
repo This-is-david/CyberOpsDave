@@ -105,16 +105,13 @@ SSH into the control node and follow the steps below:
          - sudo docker cp goofy_buck:/etc/ansible/files ~/ansible-playbooks/
 - Update the 'hosts' file to include:
      - webservers 
-    
-    10.0.0.9 ansible_python_interpreter=/usr/bin/python3
-    10.0.0.10 ansible_python_interpreter=/usr/bin/python3
-    10.0.0.8 ansible_python_interpreter=/usr/bin/python3
-    
+      `10.0.0.9 ansible_python_interpreter=/usr/bin/python3
+      `10.0.0.10 ansible_python_interpreter=/usr/bin/python3
+      `10.0.0.8 ansible_python_interpreter=/usr/bin/python3
      - elkservers
+      `10.1.0.4 ansible_python_interpreter=/usr/bin/python3
     
-    10.1.0.4 ansible_python_interpreter=/usr/bin/python3
-    
-      - Make sure that the 'hosts' file lives in /etc/ansible/hosts
+    - Make sure that the 'hosts' file lives in /etc/ansible/hosts
  
 - Run the playbook, and navigate to http://20.57.177.110:5601/app/kibana to check that the installation worked as expected.
 
