@@ -301,7 +301,12 @@ Your final act is to deface the website using command injection. Follow the walk
     
 Please include a screenshot of the defaced website. 
 
-
+![](https://github.com/This-is-david/CyberOpsDave/blob/main/OWASP%20WebGoat%20v5.4%20THE%20CHALLENGE/Images/Defaced%20Website%20Text.png)
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
+
+## EXTRA SPECIAL BONUS
+### Deface the Original Website Text
+
+![](https://github.com/This-is-david/CyberOpsDave/blob/main/OWASP%20WebGoat%20v5.4%20THE%20CHALLENGE/Images/Defaced%20Original%20Website%20Text.png)
