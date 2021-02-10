@@ -1,4 +1,4 @@
-## Unit 15 Submission File: Web Vulnerabilities and Hardening
+## Unit 15 Submission File: Web Vulnerabilities and Hardening DLM III
 
 
 ### Part 1: Q&A
@@ -207,6 +207,8 @@ Your first mission is to break the authentication scheme. There are a number of 
 
 Please include a screenshot here of the hidden JavaScript:
 
+![](https://github.com/This-is-david/CyberOpsDave/blob/main/OWASP%20WebGoat%20v5.4%20THE%20CHALLENGE/Images/Hidden%20JavaScript.png)
+
 After completing the first challenge, you will be provided with an option to continue to the next challenge.
 
 #### Challenge #2
@@ -218,6 +220,8 @@ Next, steal all of the credit card numbers from the database.
 - **Hint #2**: Break your way into the conversation and inject your own ideas.
 
 Please include a screenshot here of all the credit card numbers from the database. 
+
+![](https://github.com/This-is-david/CyberOpsDave/blob/main/OWASP%20WebGoat%20v5.4%20THE%20CHALLENGE/Images/ALL%20of%20The%20Credit%20Cards.png)
 
 After completing the second challenge, you will be provided with an option to continue to the next challenge.
 
@@ -296,6 +300,8 @@ Your final act is to deface the website using command injection. Follow the walk
     * **and** echo `You've been hacked by...` followed by your name, to the `webgoat_challenge_guest.jsp` file.
     
 Please include a screenshot of the defaced website. 
+
+
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
