@@ -1,5 +1,5 @@
 # Stock Check Lambda function
-#
+#  ALSO MAKE SURE TO USE THE IAM ROLE CHECK_INVENTORY .JSON
 # This function is triggered when values are inserted into the Inventory DynamoDB table.
 # Inventory counts are checked and if an item is out of stock, a notification is sent to an SNS Topic.
 import json, boto3
