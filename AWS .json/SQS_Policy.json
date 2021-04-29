@@ -1,0 +1,13 @@
+{
+  "Id": "Policy1616721660558",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1616721658175",
+      "Action": "sqs:*",
+      "Effect": "Allow",
+      "Resource": "*",
+      "Principal": "*"
+    }
+  ]
+}
