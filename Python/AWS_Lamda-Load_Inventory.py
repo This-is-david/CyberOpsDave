@@ -1,5 +1,5 @@
 # Load-Inventory Lambda function
-#
+#  ALSO MAKE SURE TO CHECK THE IAM ROLE LOAD_INVENTORY .JSON
 # This function is triggered by an object being created in an Amazon S3 bucket.
 # The file is downloaded and each line is inserted into a DynamoDB table.
 import json, urllib, boto3, csv
